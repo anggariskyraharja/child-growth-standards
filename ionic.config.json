@@ -1,0 +1,8 @@
+{
+  "name": "child-growth-standards",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "6f42e113"
+}
