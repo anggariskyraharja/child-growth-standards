@@ -24,3 +24,112 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+:root {
+    --ion-color-primary: #DB1F48;
+    --ion-background-color: #FFFFFF;
+}
+
+ion-toolbar {
+    --background: #DB1F48;
+    --border-style: solid;
+    --border-color: #DB1F48;
+    --color: #ffffff;
+}
+ion-label {
+    font-size: 1.0em !important;
+}
+ion-radio {
+    --color-checked: #DB1F48;
+}
+.color1 {
+    --background: #84DCC6;
+    --border-style: solid;
+    --border-color: #84DCC6;
+    --color: #000000;
+    text-align: center;
+}
+.color111 {
+    --background: #EFE9F4;
+    --border-style: solid;
+    --border-color: #EFE9F4;
+    --color: #000000;
+    text-align: center;
+}
+.color1111 {
+    --background: #98C1D9;
+    --border-style: solid;
+    --border-color: #98C1D9;
+    --color: #000000;
+    text-align: center;
+}
+.color2 {
+    --background:#E5DDC8;
+    --border-style: solid;
+    --border-color: #E5DDC8;
+    --color: #000000;
+}
+.color3 {
+    --background: #004369;
+    --border-style: solid;
+    --border-color: #004369;
+    --color: #ffffff;
+}
+.color4 {
+    --background: #062E6E;
+    --border-style: solid;
+    --border-color: #062E6E;
+    --color: #ffffff;
+    text-align: center;
+}
+.color5 {
+    --background: #ffffff;
+}
+.color6 {
+    --background: #01949A;
+    --border-style: solid;
+    --border-color: #01949A;
+    --color: #ffffff;
+}
+.color7 {
+    --background: #C0DCEC;
+    --border-style: solid;
+    --border-color: #C0DCEC;
+    --color: #000000;
+}
+.color8 {
+    --background: #48BCD1;
+    --border-style: solid;
+    --border-color: #48BCD1;
+    --color: #000000;
+}
+.color9 {
+    --background: #45B08C;
+    --border-style: solid;
+    --border-color: #45B08C;
+    --color: #000000;
+}
+.color10 {
+    --background: #15998E;
+    --border-style: solid;
+    --border-color: #15998E;
+    --color: #000000;
+}
+.color11 {
+    --background: #FFA69E;
+    --border-style: solid;
+    --border-color: #FFA69E;
+    --color: #000000;
+}
+.color12 {
+    --background: #FE4A49;
+    --border-style: solid;
+    --border-color: #FE4A49;
+    --color: #ffffff;
+}
+.color13 {
+    --background: #EA2B1F;
+    --border-style: solid;
+    --border-color: #EA2B1F;
+    --color: #ffffff;
+}

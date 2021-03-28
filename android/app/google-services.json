@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "407040234896",
+    "project_id": "child-growth-standards-829cd",
+    "storage_bucket": "child-growth-standards-829cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407040234896:android:831b6df71bfcfcf3a58f15",
+        "android_client_info": {
+          "package_name": "com.imedicalapps.childgrowthstandards"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407040234896-i81c68k86q1ignol107ijk5omvn9fnov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCf8Ozn2KN98gXwbKtyrhX_TZLwtisaL_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407040234896-i81c68k86q1ignol107ijk5omvn9fnov.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "407040234896-vb8bg0sk7k91pa69c23t53a4t2kos1f4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.imedicalapps.childgrowthstandards"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

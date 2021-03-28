@@ -1,17 +1,107 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
+<ion-header [translucent]="true" >
+  <ion-toolbar >
+    <ion-title >
+      Weight for Age
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-item class="color1">
+    <ion-text>
+      <p>Growth indicator of weight-for-age based on WHO standards for 0-5 years.</p>
+    </ion-text>
+  </ion-item>
+  <ion-item-divider class="color5"></ion-item-divider>
+    <ion-item class="color2">
+      <ion-label>Birth date:</ion-label>
+      <ion-datetime [(ngModel)]="from" placeholder="Pick date"></ion-datetime>
+    </ion-item>
+    <ion-item class="color2">
+      <ion-label>Measurement date:</ion-label>
+      <ion-datetime [(ngModel)]="to" placeholder="Pick date"></ion-datetime>
+    </ion-item>
+    <ion-item class="color2">
+      <ion-label>Gender:</ion-label>
+      <ion-select value="boys" (ionChange)="checkgender($event)">
+          <ion-select-option value="boys">Boys</ion-select-option>
+          <ion-select-option value="girls">Girls</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="color2">
+      <ion-label>Unit:</ion-label>
+      <ion-select value="kg" (ionChange)="checksatuan($event)">
+          <ion-select-option value="kg">Kilograms (kg)</ion-select-option>
+          <ion-select-option value="lbs">Pounds (lbs)</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" (click)="calculate()" class="color3">Calculate<ion-icon slot="end" name="checkmark-circle-outline"></ion-icon></ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" (click)="clear()" class="color6">Clear<ion-icon slot="end" name="close-circle-outline"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-item-divider class="color5"></ion-item-divider>
+    <ion-item class="color7"  *ngIf='age'>
+      <ion-label>Age:</ion-label>
+      <ion-text>{{age}}</ion-text>
+    </ion-item>
+    <ion-item class="color7" *ngIf='sd1'>
+      <ion-label>Ideal weight:</ion-label>
+      <ion-text>{{sd4.toFixed(1)}} {{satuan}}</ion-text>
+    </ion-item>
+    <ion-item class="color7" *ngIf='sd1'>
+      <ion-label>Normal:</ion-label>
+      <ion-text>{{sd2.toFixed(1)}} {{satuan}} - {{sd5.toFixed(1)}} {{satuan}}</ion-text>
+    </ion-item>
+    <ion-item class="color9" *ngIf='sd1'>
+      <ion-label>Underweight:</ion-label>
+      <ion-text>{{sd1.toFixed(1)}} {{satuan}} - {{sd2.toFixed(1)}} {{satuan}}</ion-text>
+    </ion-item>
+    <ion-item class="color10" *ngIf='sd1'>
+      <ion-label>Severely underweight:</ion-label>
+      <ion-text><{{sd1.toFixed(1)}} {{satuan}}</ion-text>
+    </ion-item>
+    <ion-item class="color11" *ngIf='sd1'>
+      <ion-text><p>Children whose weight-for-age >{{sd5.toFixed(1)}} {{satuan}} may have a growth problem, but this is better assessed from weight-for-height</p></ion-text>
+    </ion-item>
+    <ion-item-divider class="color5"></ion-item-divider>
+    <ion-card *ngIf='sd1'>
+    <ion-item class="color3">
+      <ion-text>Z Score for {{totalmonth}} months old</ion-text>
+    </ion-item>
+    <ion-item class="color10">
+      <ion-label>-3SD:</ion-label>
+      <ion-text>{{sd1.toFixed(1)}} {{satuan}}</ion-text>
+    </ion-item>
+    <ion-item class="color9">
+      <ion-label>-2SD:</ion-label>
+      <ion-text>{{sd2.toFixed(1)}} {{satuan}}</ion-text>
+    </ion-item>
+    <ion-item class="color8">
+      <ion-label>-1SD:</ion-label>
+      <ion-text>{{sd3.toFixed(1)}} {{satuan}}</ion-text>
+    </ion-item>
+    <ion-item class="color7">
+      <ion-label>Median:</ion-label>
+      <ion-text>{{sd4.toFixed(1)}} {{satuan}}</ion-text>
+    </ion-item>
+    <ion-item class="color11">
+      <ion-label>+1SD:</ion-label>
+      <ion-text>{{sd5.toFixed(1)}} {{satuan}}</ion-text>
+    </ion-item>
+    <ion-item class="color12">
+      <ion-label>+2SD:</ion-label>
+      <ion-text>{{sd6.toFixed(1)}} {{satuan}}</ion-text>
+    </ion-item>
+    <ion-item class="color13">
+      <ion-label>+3SD:</ion-label>
+      <ion-text>{{sd7.toFixed(1)}} {{satuan}}</ion-text>
+    </ion-item>
+  </ion-card>
+  <p *ngIf='sd1' class="ion-padding"><a target="_blank" rel="noopener noreferrer" href="https://www.who.int/tools/child-growth-standards">Click here for the reference!</a></p>
 </ion-content>

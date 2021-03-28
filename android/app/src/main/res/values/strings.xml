@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Child Growth Standards</string>
+    <string name="title_activity_main">Child Growth Standards</string>
+    <string name="package_name">com.imedicalapps.childgrowthstandards</string>
+    <string name="custom_url_scheme">com.imedicalapps.childgrowthstandards</string>
+</resources>
